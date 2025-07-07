@@ -79,3 +79,13 @@ Creación de usuario
 
 Lista de usuarios
 ![profile](./docs/list-users.png/)
+
+
+## 🛠️ Sitio informativo 
+En desarrollo (React + NextJs)
+```
+Repo: https://github.com/Gmsantos2/sw-employees.git
+```
+![info](./docs/cap-sg-info.png/)
+
+

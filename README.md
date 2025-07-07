@@ -17,6 +17,7 @@ Este proyecto es una aplicación de administración de empleados desarrollada co
 
 ## 📁 Estructura del Proyecto
 
+```
 src/
 ├── app/
 | ├── components/ # Componente global
@@ -24,7 +25,7 @@ src/
 │ ├── features/ # Módulos de funcionalidad (auth, users, roles, etc)
 │ ├── shared/ # Componentes, layout, utilidades compartidas
 │ └── app.routes.ts # Definición principal de rutas
-
+```
 
 ---
 

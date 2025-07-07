@@ -1,0 +1,9 @@
+<form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Nombre del rol</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">
+    Crear rol
+  </button>
+</form>

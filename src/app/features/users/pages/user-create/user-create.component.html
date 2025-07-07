@@ -1,0 +1,47 @@
+<mat-card class="form-card">
+  <mat-card-title>Crear nuevo usuario</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="user-form">
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="role">
+          <mat-option *ngFor="let role of roles" [value]="role._id">
+            {{ role.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password" type="password" />
+      </mat-form-field>
+
+      <div class="file-upload">
+        <label for="file">Foto de perfil</label>
+        <input type="file" id="file" (change)="onFileChange($event)" accept="image/png" />
+      </div>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">
+        Crear usuario
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

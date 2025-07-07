@@ -1,0 +1,36 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content {
+  padding: 16px;
+  min-height: calc(100vh - 64px); /* altura completa con toolbar */
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title {
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: inline-flex;
+  }
+}

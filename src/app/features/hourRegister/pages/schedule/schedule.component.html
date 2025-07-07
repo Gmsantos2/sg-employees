@@ -1,0 +1,40 @@
+<form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Tipo</mat-label>
+    <mat-select formControlName="type">
+      <mat-option *ngFor="let t of types" [value]="t">{{ t }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="scheduleForm.get('type')?.hasError('required')">
+      El tipo es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Fecha</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      formControlName="date"
+      [min]="minDate"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker" />
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="scheduleForm.get('date')?.hasError('required')">
+      La fecha es obligatoria
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Hora</mat-label>
+    <input
+      matInput
+      type="time"
+      formControlName="time"
+    />
+    <mat-error *ngIf="scheduleForm.get('time')?.hasError('required')">
+      La hora es obligatoria
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Registrar Hora</button>
+</form>

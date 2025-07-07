@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" mode="side" [opened]="true">
+    <mat-toolbar color="primary">Menú</mat-toolbar>
+    <mat-nav-list>
+      <ng-container *ngFor="let item of menuItems">
+        <mat-list-item
+          [ngClass]="{ active: activeRoute === item.path }"
+          (click)="navigate(item.path); ifMobileClose(drawer)"
+          style="cursor: pointer"
+        >
+          <mat-icon matListIcon>{{ item.icon }}</mat-icon>
+          <span matLine>{{ item.label }}</span>
+        </mat-list-item>
+      </ng-container>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item (click)="logout()" style="cursor: pointer">
+        <mat-icon matListIcon>logout</mat-icon>
+        <span matLine>Cerrar sesión</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="toolbar">
+      <!-- Solo se muestra en pantallas pequeñas -->
+      <button
+        mat-icon-button
+        class="menu-button"
+        (click)="drawer.toggle()"
+        aria-label="Toggle sidenav"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="toolbar-title">Sistema de empleados</span>
+      <span class="spacer"></span>   
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

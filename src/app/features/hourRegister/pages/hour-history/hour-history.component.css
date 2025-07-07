@@ -1,0 +1,21 @@
+.history-container {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 800px;
+}
+
+.full-width-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.empty-message {
+  padding: 16px;
+  text-align: center;
+  color: #777;
+}

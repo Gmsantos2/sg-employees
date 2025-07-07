@@ -11,7 +11,6 @@ import { Profile } from '../../interfaces/profile.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MATERIAL_STANDALONE } from '../../../../shared/material/material.standalone';
 
-
 @Component({
   selector: 'app-profile',
   standalone: true,

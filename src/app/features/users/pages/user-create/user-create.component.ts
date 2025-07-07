@@ -48,7 +48,7 @@ export class UserCreateComponent {
 
   loadRoles() {
   this.roleService.getRoles().subscribe({
-    next: (res) => (this.roles = res.data), // ✅ Ahora sí reconoce `.data`
+    next: (res) => (this.roles = res.data), 
     error: (err) => {
       console.error('Error al cargar roles', err);
       this.snackBar.open('No se pudieron cargar los roles', 'Cerrar', {
@@ -57,8 +57,6 @@ export class UserCreateComponent {
     },
   });
 }
-
-
   onFileChange(event: Event) {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {

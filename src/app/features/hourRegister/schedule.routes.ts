@@ -1,4 +1,3 @@
-// src/app/features/schedule/schedule.routes.ts
 import { Routes } from '@angular/router';
 import { authGuard } from '../../core/guards/auth.guard';
 

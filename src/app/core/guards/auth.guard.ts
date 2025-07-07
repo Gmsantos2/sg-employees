@@ -4,7 +4,6 @@ import { CanActivateFn, Router } from '@angular/router';
 export const authGuard: CanActivateFn = () => {
   const router = inject(Router);
 
-  // ✅ Evitar error en SSR (localStorage no existe en Node)
   if (typeof window === 'undefined') {
     console.log('authGuard SSR: localStorage no disponible');
     return false;

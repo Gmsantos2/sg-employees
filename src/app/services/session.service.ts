@@ -38,7 +38,6 @@ export class SessionService {
 
     const warningTime = timeLeft - 60;
 
-  
     this.warningTimerSub = timer(warningTime * 1000).subscribe(() => {
       this.openCountdownDialog(decoded.exp);
     });
@@ -68,7 +67,6 @@ export class SessionService {
     this.startSessionWatcher(newToken);
   }
 
- 
   openCountdownDialog(exp: number): void {
     const dialogRef = this.dialog.open(SessionWarningDialogComponent, {
       data: { exp },

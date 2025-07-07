@@ -51,6 +51,7 @@ git clone https://github.com/Gmsantos2/sg-employees.git
 cd sg-employees
 npm i
 ng serve
+```
 
 ## 🔐 Autenticación
 Se utiliza JWT.
@@ -64,9 +65,16 @@ Todas las rutas están protegidas por guards (authGuard y roleGuard).
 El menú se adapta dinámicamente según el rol (ej: ADMIN ve más opciones).
 Validaciones en formularios
 
-
+#
 Capturas de ejecución
 Login
+![Login](./docs/cap1.png)
 
+Profile desde admin
+![profile](./docs/cap-admin-profile.png/)
 
+Creación de usuario 
+![create](./docs/cap-admin-create.png/)
 
+Lista de usuarios
+![profile](./docs/list-users.png/)
